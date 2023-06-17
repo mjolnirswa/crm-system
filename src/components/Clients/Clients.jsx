@@ -16,7 +16,6 @@ const Clients = () => {
     const [allClientsStat, setAllClientsStat] = useState(null)
     const [newClientsStat, setNewClientsStat] = useState(null)
     const [activeClientStat, setActiveClientStat] = useState(null)
-    const [loading, setLoading] = useState(true)
 
     const handleButtonForm = () => setFormActive(!isFormActive);
     const handlePopup = () => setPopupActive(!popupActive);
@@ -32,10 +31,7 @@ const Clients = () => {
             setAllClientsStat(allClientParam)
             setNewClientsStat(newClientParam)
             setActiveClientStat(activeClientParam)
-            setLoading(false)
         }
-
-        console.log(setLoading)
 
         return () => fetchData()
     }, [])
@@ -67,7 +63,7 @@ const Clients = () => {
                     text='Все клиенты' 
                     count={allClientsStat === null ? '' : allClientsStat.count} 
                     percent={allClientsStat === null ? '' : allClientsStat.percent}
-                    loading={loading === true ? true : false}
+                    loading={allClientsStat === null ? true : false}
                     />
                 </div>
 
@@ -76,7 +72,7 @@ const Clients = () => {
                     text='Новых клиентов' 
                     count={newClientsStat === null ? '' : newClientsStat.count} 
                     percent={newClientsStat === null ? '' : newClientsStat.percent}
-                    loading={loading === true ? true : false}/>
+                    loading={newClientsStat === null ? true : false}/>
                 </div>
 
                 <div>
@@ -84,7 +80,7 @@ const Clients = () => {
                     text='Активных клиентов' 
                     count={activeClientStat === null ? '' : activeClientStat.count} 
                     percent={activeClientStat === null ? '' : activeClientStat.percent} 
-                    loading={loading === true ? true : false}/>
+                    loading={activeClientStat === null ? true : false}/>
                 </div>
             </div>
 

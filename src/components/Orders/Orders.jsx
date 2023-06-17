@@ -16,7 +16,6 @@ const Orders = () => {
     const [allOrdersStat, setAllOrdersStat] = useState(null)
     const [newOrdersStat, setNewOrdersStat] = useState(null)
     const [activeOrdersStat, setActiveOrdersStat] = useState(null)
-    const [loading, setLoading] = useState(true)
 
     const handleButtonForm = () => setFormActive(!isFormActive);
     const handlePopup = () => setPopupActive(!popupActive);
@@ -31,7 +30,6 @@ const Orders = () => {
             setAllOrdersStat(allOrderParam)
             setNewOrdersStat(newOrderParam)
             setActiveOrdersStat(activeOrderParam)
-            setLoading(false)
         }
 
         return () => fetchData()
@@ -64,7 +62,7 @@ const Orders = () => {
                     text='Все заказы' 
                     count={allOrdersStat === null ? '' : allOrdersStat.count} 
                     percent={allOrdersStat === null ? '' : allOrdersStat.percent}
-                    loading={loading === true ? true : false}/>
+                    loading={allOrdersStat === null ? true : false}/>
                 </div>
 
                 <div>
@@ -72,7 +70,7 @@ const Orders = () => {
                     text='Новых заказов' 
                     count={newOrdersStat === null ? '' : newOrdersStat.count}  
                     percent={newOrdersStat === null ? '' : newOrdersStat.percent}  
-                    loading={loading === true ? true : false}/>
+                    loading={allOrdersStat === null ? true : false}/>
                 </div>
 
                 <div>
@@ -80,7 +78,7 @@ const Orders = () => {
                     text='Активных заказов' 
                     count={activeOrdersStat === null ? '' : activeOrdersStat.count}
                     percent={activeOrdersStat === null ? '' : activeOrdersStat.percent}
-                    loading={loading === true ? true : false}/>
+                    loading={allOrdersStat === null ? true : false}/>
                 </div>
             </div>
 
