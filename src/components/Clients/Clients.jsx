@@ -26,15 +26,21 @@ const Clients = () => {
             const allClientParam = await getClientCount()
             const newClientParam = await getNewClientsCount()
             const activeClientParam = await getActiveClientCount()
+            console.log('внутри запроса')
             console.log(allClientParam)
 
             setAllClientsStat(allClientParam)
             setNewClientsStat(newClientParam)
             setActiveClientStat(activeClientParam)
         }
+        console.log('вне запроса')
+        console.log(allClientsStat)
 
         return () => fetchData()
     }, [])
+
+    console.log('вне эффекта')
+    console.log(allClientsStat)
 
     return (
         <div className='relative'>
