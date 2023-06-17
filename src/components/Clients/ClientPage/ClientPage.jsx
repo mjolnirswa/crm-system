@@ -7,7 +7,7 @@ import Button from "../../UI/Button";
 import { doc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { emailValidation } from "../../../utils/FormValidation";
 import { db } from "../../../firebase";
-import ClientOrders from './ClientOrders';
+import ClientOrders from '../ClientPage/ClientOrders';
 
 const ClientPage = () => {
     const {clientId} = useParams();
