@@ -64,7 +64,7 @@ const Orders = () => {
                     text='Все заказы' 
                     count={allOrdersStat === null ? '' : allOrdersStat.count} 
                     percent={allOrdersStat === null ? '' : allOrdersStat.percent}
-                    loading={loading}/>
+                    loading={loading === true ? true : false}/>
                 </div>
 
                 <div>
@@ -72,7 +72,7 @@ const Orders = () => {
                     text='Новых заказов' 
                     count={newOrdersStat === null ? '' : newOrdersStat.count}  
                     percent={newOrdersStat === null ? '' : newOrdersStat.percent}  
-                    loading={loading}/>
+                    loading={loading === true ? true : false}/>
                 </div>
 
                 <div>
@@ -80,7 +80,7 @@ const Orders = () => {
                     text='Активных заказов' 
                     count={activeOrdersStat === null ? '' : activeOrdersStat.count}
                     percent={activeOrdersStat === null ? '' : activeOrdersStat.percent}
-                    loading={loading}/>
+                    loading={loading === true ? true : false}/>
                 </div>
             </div>
 

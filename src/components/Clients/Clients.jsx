@@ -35,6 +35,8 @@ const Clients = () => {
             setLoading(false)
         }
 
+        console.log(setLoading)
+
         return () => fetchData()
     }, [])
 
@@ -65,7 +67,7 @@ const Clients = () => {
                     text='Все клиенты' 
                     count={allClientsStat === null ? '' : allClientsStat.count} 
                     percent={allClientsStat === null ? '' : allClientsStat.percent}
-                    loading={loading}
+                    loading={loading === true ? true : false}
                     />
                 </div>
 
@@ -74,7 +76,7 @@ const Clients = () => {
                     text='Новых клиентов' 
                     count={newClientsStat === null ? '' : newClientsStat.count} 
                     percent={newClientsStat === null ? '' : newClientsStat.percent}
-                    loading={loading}/>
+                    loading={loading === true ? true : false}/>
                 </div>
 
                 <div>
@@ -82,7 +84,7 @@ const Clients = () => {
                     text='Активных клиентов' 
                     count={activeClientStat === null ? '' : activeClientStat.count} 
                     percent={activeClientStat === null ? '' : activeClientStat.percent} 
-                    loading={loading}/>
+                    loading={loading === true ? true : false}/>
                 </div>
             </div>
 
