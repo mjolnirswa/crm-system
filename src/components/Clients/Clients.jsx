@@ -36,8 +36,10 @@ const Clients = () => {
         console.log('вне запроса')
         console.log(allClientsStat)
 
-        return () => fetchData()
-    }, [])
+        return () => {
+            fetchData();
+        }
+    }, [allClientsStat])
 
     console.log('вне эффекта')
     console.log(allClientsStat)

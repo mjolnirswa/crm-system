@@ -32,8 +32,10 @@ const Orders = () => {
             setActiveOrdersStat(activeOrderParam)
         }
 
-        return () => fetchData()
-    }, [])
+        return () => {
+            fetchData();
+        }
+    }, [allOrdersStat])
 
     return (
         <>
