@@ -62,7 +62,7 @@ const LineGraph = () => {
       setData(dataStat)
     }
 
-    return () => fetchData()
+    fetchData()
   }, []) 
 
     return (
