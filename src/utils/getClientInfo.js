@@ -53,10 +53,7 @@ export const getClientCount = async () => {
     try {
         const today = new Date();
         const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
-        const prevMonthQuery = query(
-            collection(db, 'clients'), 
-            where("createdAt", ">", lastMonth)
-        )
+        const prevMonthQuery = query(collection(db, 'clients'), where("createdAt", ">", lastMonth))
 
         const clientsCollection = await getDocs(collection(db, 'clients'))
         

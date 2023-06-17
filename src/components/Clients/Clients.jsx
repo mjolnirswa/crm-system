@@ -27,6 +27,7 @@ const Clients = () => {
             const allClientParam = await getClientCount()
             const newClientParam = await getNewClientsCount()
             const activeClientParam = await getActiveClientCount()
+            console.log(allClientParam)
 
             setAllClientsStat(allClientParam)
             setNewClientsStat(newClientParam)
