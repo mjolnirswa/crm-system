@@ -29,6 +29,7 @@ const Input = (props) => {
                 onChange={(e) => inputHandler(
                     props.type === 'file' ? e.target.files[0] : e.target.value
                 )} 
+                onKeyDown={props.onKeyDown}
                 className={style}
                 placeholder={props.placeholder}
                 type={props.type}

@@ -132,7 +132,7 @@ const Orders = () => {
 
             <div className='mt-10 w-full flex flex-col mr-5'>
                     
-                    <div className='bg-gray-100 p-4 items-center rounded-t-xl pr-20 flex'>
+                    <div className='bg-gray-100 p-4 items-center rounded-t-xl pr-20 flex md:w-[700px] sm:w-[700px] lg:w-full'>
                         <div className='grid grid-cols-12 w-full'>
                             <p className='text-sm text-bold col-span-3 mx-auto font-medium'>Заказ</p>
                             <p className='text-sm text-bold col-span-3 mx-auto font-medium'>Статус</p>
@@ -147,7 +147,8 @@ const Orders = () => {
                     searchQuery={query}
                     />
 
-                    <div className='flex p-3 border-2 border-inherit rounded-b-xl items-center justify-between bg-gray-100'>
+                    <div className='flex p-3 border-2 border-inherit rounded-b-xl items-center justify-between 
+                    bg-gray-100 md:w-[700px] sm:w-[700px] lg:w-full'>
                         
                     </div>
             </div>

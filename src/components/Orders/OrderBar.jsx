@@ -19,7 +19,7 @@ const OrderBar = (props) => {
 
     return (
         <div className="p-3 border-2 border-inherit flex items-center relative justify-around pr-20
-        hover:bg-gray-100">
+        hover:bg-gray-100 md:w-[700px] sm:w-[700px] lg:w-full">
             <div className='grid grid-cols-12 w-full'>
                 <p className='text-sm text-bold col-span-3 mx-auto'>{props.orderNumber}</p>
                 <p className={styleActive}>{props.orderStatus}</p>

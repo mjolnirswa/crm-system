@@ -74,6 +74,12 @@ const LoginForm = (props) => {
 
     }, [userFirebase])
 
+    const handleKeyDown = (e) => {
+        if(e.key === "Enter") {
+            handleLogin()
+        }
+    }
+
     return (
         <div className="w-full">
             <div className="pt-5 space-y-6">
@@ -100,6 +106,7 @@ const LoginForm = (props) => {
                 placeholder='*********'
                 type='password'
                 onChange={handlePasswordChange}
+                onKeyDown={handleKeyDown}
                 >
                 </Input>
 

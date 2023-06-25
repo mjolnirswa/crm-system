@@ -1,6 +1,6 @@
 import { AiOutlinePlus } from "react-icons/ai";
 import LineGraph from "./LineGraph";
-import BarGraph from "./BarGraph";
+// import BarGraph from "./BarGraph";
 
 const Document = () => {
     return (
@@ -25,7 +25,7 @@ const Document = () => {
                 <div>
                     <h2 className="text-lg">Статистика продаж за 6 месяцев</h2>
 
-                    <div className="mt-4">
+                    <div className="mt-4 flex-nowrap overflow-x-auto">
                         <LineGraph />
                     </div>
                 </div>

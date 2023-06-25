@@ -12,6 +12,8 @@ const App = () => {
   useEffect(() => {
     if (isAuth === false) {
       navigate("/auth")
+    }else {
+      navigate("/clients")
     }
   }, [isAuth])
 
